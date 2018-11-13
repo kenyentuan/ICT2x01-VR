@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, WebVR! • A-Frame</title>
+    <meta name="description" content="Hello, WebVR! • A-Frame">
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+  </head>
+  <body>
+    <!-- Position (-veleft/+veright, -veDown/+veUp, -veForward/+veBackward) -->
+<a-scene>
+  
+  <a-entity id="personView" position="0 2 15">
+    <a-camera>
+      <a-entity position="0 0 -3" geometry="primitive: ring; radiusInner: 0.2; radiusOuter: 0.3;" material="color: cyan; shader: flat" cursor="maxDistance: 30; fuse: true">
+        <a-animation begin="click" easing="ease-in" attribute="scale" fill="forwards" from="0.2 0.2 0.2" to="1 1 1" dur="150"></a-animation>
+        <a-animation begin="fusing" easing="ease-in" attribute="scale" fill="backwards" from="1 1 1" to="0.2 0.2 0.2" dur="1500"></a-animation>
+      </a-entity>
+    </a-camera>
+  </a-entity>
+  
+  <a-link position="0 5 0" href="sharedPathScene.html"></a-link>
+  
+    </a-scene>
+  </body>
+</html>
