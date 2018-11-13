@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, WebVR! • A-Frame</title>
+    <meta name="description" content="Hello, WebVR! • A-Frame">
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+  </head>
+  <body>
+    <!-- Position (-veleft/+veright, -veDown/+veUp, -veForward/+veBackward) -->
+<a-scene>
+  
+  <a-entity id="personView" position="0 2 15">
+    <a-camera>
+      <a-entity position="0 0 -3" geometry="primitive: ring; radiusInner: 0.2; radiusOuter: 0.3;" material="color: cyan; shader: flat" cursor="maxDistance: 30; fuse: true">
+        <a-animation begin="click" easing="ease-in" attribute="scale" fill="forwards" from="0.2 0.2 0.2" to="1 1 1" dur="150"></a-animation>
+        <a-animation begin="fusing" easing="ease-in" attribute="scale" fill="backwards" from="1 1 1" to="0.2 0.2 0.2" dur="1500"></a-animation>
+      </a-entity>
+    </a-camera>
+    <a-entity rotation="0 -90 0" scale="1.5 1.5 1.5" position="0 0 -0.85"
+              collada-model="url(https://cdn.glitch.com/9233de66-b45d-4647-928d-3fa5216fb051%2Fbicycle.dae?1541428692167)">
+ 
+    </a-entity>
+  </a-entity>
+  
+  <!--   Light Gray Path -->
+  <a-plane id="pedestrainPath" position="-5 0 0" rotation="-90 0 0" scale="1 20 1" width="10" height="60" color="#A9A9A9"></a-plane>
+  <a-assets>
+    <img id="walkpath" src="https://cdn.glitch.com/9233de66-b45d-4647-928d-3fa5216fb051%2Fwalkpath.png?1537453763817">
+  </a-assets>
+  <a-image id="pedestrainImg" src="#walkpath" position="-5 0.1 0" rotation="-90 0 0" width="6" height="6"></a-image>
+  
+  <!--   Red Path -->
+  <a-plane id="redPath" position="5 0 0" rotation="-90 0 0" scale="1 20 1" width="10" height="60" color="#a52a2a"></a-plane>
+  <a-assets>
+    <img id="bike" src="https://cdn.glitch.com/9233de66-b45d-4647-928d-3fa5216fb051%2Fplain_bicycle_icon_large3.png?1537453157828">
+  </a-assets>
+  <a-image id="bikeImg" src="#bike" position="5 0.1 0" rotation="-90 0 0" width="7" height="7"></a-image>
+  
+  <!-- Sky colour -->
+  <a-sky color="#87cefa"></a-sky>
+  
+  <!--   Side Path -->
+  <a-box id="leftSide" position="-11.5 0 0" rotation="-90 0 0" scale="1.5 20 1.5" width="2" height="60" color="#d3d3d3"></a-box>
+  
+  <!--   Ground Path -->
+  <a-plane id="greenPatch" position="0 -0.99999 0" rotation="-90 0 0" scale="1 20 1" width="60" height="60" color="#228b22"></a-plane>
+  
+  <!--   Side Path -->
+  <a-box id="rightSide" position="11.5 0 0" rotation="-90 0 0" scale="1.5 20 1" width="2" height="60" color="#d3d3d3"></a-box>
+  
+  <!--   Road Path -->
+  <a-plane id="road" position="24 0 0" rotation="-90 0 0" scale="1.5 20 1" width="15" height="60" color="#708090"></a-plane>
+
+  <!-- Car box. -->
+  <a-entity id="car" position = "0 0 150">
+    <a-box position="18 2 0" color="tomato" depth="5" height="2" width="4"></a-box>
+    <a-cylinder position="18 1 1.5" rotation="-90 90 0" radius="0.5" height="5" color="#A52A2A"> </a-cylinder>
+    <a-cylinder position="18 1 -1.5" rotation="-90 90 0" radius="0.5" height="5" color="#A52A2A"> </a-cylinder>
+    <a-animation attribute="position"
+               dur="25000"
+               fill="forwards"
+               to="0 0 -360"
+               repeat="indefinite"></a-animation>
+  </a-entity>
+  
+  <a-entity id="audi" rotation="0 0 0" scale="1 1 1" position="35 0 150"
+              collada-model="url(https://cdn.glitch.com/9233de66-b45d-4647-928d-3fa5216fb051%2FaudiRS3.dae?1541484275806)">
+ <a-animation attribute="position"
+               dur="23000"
+               fill="forwards"
+               to="35 0 -360"
+               repeat="indefinite"></a-animation>
+    </a-entity>
+  <a-entity id="mecrS500" rotation="0 0 0" scale="1.5 1.5 1.5" position="30 0 150"
+              collada-model="url(https://cdn.glitch.com/9233de66-b45d-4647-928d-3fa5216fb051%2FMercedes-Benz%2BS500%2BW221.dae?1541484775933)">
+ <a-animation attribute="position"
+               dur="20000"
+               fill="forwards"
+               to="30 0 -360"
+               repeat="indefinite"></a-animation>
+    </a-entity>
+
+  <a-entity id="question" position="0 5 8" rotation="0 0 0">
+    <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" 
+             width="8" height="2" color="#A9A9A9"
+             material="opacity: 0.5; transparent: true"></a-plane>
+    <a-text position="-2.5 0 0" value="Which path should you take?" width="10" height="10" color="#000000"></a-text>
+  </a-entity>
+  <a-entity id="option1" position="-8 5 15" rotation="0 85 0">
+    <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" width="8" height="2" color="#6495ed"></a-plane>
+    <a-text rotation="0 0 0" value="Hello, World! 1" width="10" height="10" color="#000000">
+      <a-animation begin="click" attribute="color" from="#000000" to="#228B22"></a-animation>
+    </a-text>
+  </a-entity>
+  <a-entity id="option2" position="8 5 15" rotation="0 -85 0">
+    <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" width="8" height="2" color="#a52a2a"
+             material="opacity: 0.5; transparent: true"></a-plane>
+    <a-text value="Hello, World! 3" width="10" height="10" color="#000000"></a-text>
+  </a-entity>
+</a-scene>
+
+  </body>
+</html>
