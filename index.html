@@ -5,6 +5,12 @@
     <title>Hello, WebVR! • A-Frame</title>
     <meta name="description" content="Hello, WebVR! • A-Frame">
     <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+    <script>
+    window.addEventListener('vrdisplayactivate', function() {
+      info.textContent = 'Display activated.';
+      reportDisplays();
+    });
+    </script>
   </head>
   <body>
     <!-- Position (-veleft/+veright, -veDown/+veUp, -veForward/+veBackward) -->
@@ -19,19 +25,24 @@
     </a-camera>
     <a-entity rotation="0 -90 0" scale="1.5 1.5 1.5" position="0 0 -0.85"
               collada-model="url(https://cdn.glitch.com/9233de66-b45d-4647-928d-3fa5216fb051%2Fbicycle.dae?1541428692167)">
- 
     </a-entity>
+    <a-animation attribute="position"
+                 begin="forward"
+                 delay="5000"
+                 dur="25000"
+                 fill="forwards"
+                 to="2 2 -290"></a-animation>
   </a-entity>
   
   <!--   Light Gray Path -->
-  <a-plane id="pedestrainPath" position="-5 0 0" rotation="-90 0 0" scale="1 20 1" width="10" height="60" color="#A9A9A9"></a-plane>
+  <a-plane id="pedestrainPath" position="-5 0 0" rotation="-90 0 0" scale="1 10 1" width="10" height="60" color="#A9A9A9"></a-plane>
   <a-assets>
     <img id="walkpath" src="https://cdn.glitch.com/9233de66-b45d-4647-928d-3fa5216fb051%2Fwalkpath.png?1537453763817">
   </a-assets>
   <a-image id="pedestrainImg" src="#walkpath" position="-5 0.1 0" rotation="-90 0 0" width="6" height="6"></a-image>
   
   <!--   Red Path -->
-  <a-plane id="redPath" position="5 0 0" rotation="-90 0 0" scale="1 20 1" width="10" height="60" color="#a52a2a"></a-plane>
+  <a-plane id="redPath" position="5 0 0" rotation="-90 0 0" scale="1 10 1" width="10" height="60" color="#a52a2a"></a-plane>
   <a-assets>
     <img id="bike" src="https://cdn.glitch.com/9233de66-b45d-4647-928d-3fa5216fb051%2Fplain_bicycle_icon_large3.png?1537453157828">
   </a-assets>
@@ -60,7 +71,7 @@
     <a-animation attribute="position"
                dur="25000"
                fill="forwards"
-               to="0 0 -360"
+               to="0 0 -1000"
                repeat="indefinite"></a-animation>
   </a-entity>
   
@@ -69,7 +80,7 @@
  <a-animation attribute="position"
                dur="23000"
                fill="forwards"
-               to="35 0 -360"
+               to="35 0 -1000"
                repeat="indefinite"></a-animation>
     </a-entity>
   <a-entity id="mecrS500" rotation="0 0 0" scale="1.5 1.5 1.5" position="30 0 360"
@@ -77,9 +88,10 @@
  <a-animation attribute="position"
                dur="20000"
                fill="forwards"
-               to="30 0 -360"
+               to="30 0 -1000"
                repeat="indefinite"></a-animation>
     </a-entity>
+  
 <!-- Question for the scene -->
   <a-entity id="question" position="0 5 8" rotation="0 0 0">
     <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" 
@@ -90,7 +102,7 @@
   </a-entity>
   
   <!--  Option 1  -->
-  <a-entity id="option1Select" position="-5.5 5 8" rotation="0 45 0" show-encouring-msg>
+  <a-entity id="option1Select" position="-5.5 5 8" rotation="0 45 0" show-corrective-msg>
     <a-text rotation="0 0 0" position="0 0 0" align="center"
             value="Option 1" 
             width="10" height="10" color="white">
@@ -98,6 +110,7 @@
     <a-circle color="#6495ed" radius="1"></a-circle>
   </a-entity>
   
+<!-- Corrective Msg -->
   <a-entity id="correctiveMsg" position="-5.5 8 9" rotation="25 45 0" visible="false">
     <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" width="8" height="3" color="firebrick"
               material="opacity: 0.9; transparent: true"></a-plane>
@@ -105,11 +118,11 @@
             value="Sorry, you got the wrong answer!\n*Click to dismiss*" 
             width="10" height="10" color="white">
     </a-text>
-    <a-animation begin="click" attribute="visible" from="true" to="false"></a-animation>
+    <a-animation begin="click" attribute="visible" to="false"></a-animation>
   </a-entity>
   
   <script>
-  AFRAME.registerComponent('show-encouring-msg',{
+  AFRAME.registerComponent('show-corrective-msg',{
    init: function (){ 
      this.el.addEventListener('click', function (evt){
      var correctiveMsg = document.querySelector("#correctiveMsg");
@@ -128,10 +141,37 @@
   </a-entity>
   
 <!--  Option 2  -->
-  <a-assets>
-    <img id="option2Click">
-  </a-assets>
-  <a-entity position="5.5 5 8" rotation="0 0 0" link="href: #; title: Option 2; titleColor: black; backgroundColor: #a52a2a;"></a-entity>
+  <a-entity id="option2Select" position="5.5 5 8" rotation="0 -45 0" next-scene>
+    <a-text rotation="0 0 0" position="0 0 0" align="center"
+            value="Option 2" 
+            width="10" height="10" color="white">
+    </a-text>
+    <a-circle color="#a52a2a" radius="1"></a-circle>
+  </a-entity>
+  
+  <!-- Encouraging Msg -->
+  <a-entity id="encourageMsg" position="0 8 9" rotation="25 0 0" visible="false">
+    <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" width="12" height="3" color="lime"
+              material="opacity: 0.9; transparent: true"></a-plane>
+    <a-text rotation="0 0 0" position="0 0 0" align="center"
+            value="You are correct!\n\nAlways keep left on the red path and within the speed limit. *You will be moving in 5 seconds.*" 
+            width="10" height="10" color="white">
+    </a-text>
+  </a-entity>
+  
+  <script>
+  AFRAME.registerComponent('next-scene',{
+   init: function (){ 
+     this.el.addEventListener('click', function (evt){
+       var person = document.querySelector("#personView");
+       var encourageMsg = document.querySelector("#encourageMsg");
+      encourageMsg.setAttribute('visible','true');
+       person.emit('forward');
+     // window.location.href = "tutorialView.html";
+   });
+   }
+   });
+  </script>
   
   <a-entity id="option2" position="8 5 15" rotation="0 -85 0">
     <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" width="8" height="2" color="#a52a2a"
@@ -139,6 +179,14 @@
     <a-text position="0 0 0" align="center"
             value="Hello, World! 3" width="10" height="10" color="#000000"></a-text>
   </a-entity>
+  
+  <!-- Link to go to ??? -->
+  <a-assets>
+    <img id="startGame">
+  </a-assets>
+  <a-entity position="2 2 -293" link="href: sharedPathScene.html; title: Click for next question; 
+                                     titleColor: black; backgroundColor: lime;
+                                     visualAspectEnabled: true;"></a-entity>
   
 </a-scene>
 
