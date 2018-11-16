@@ -29,22 +29,24 @@
   </a-entity>
   
   <!--   Light Gray Path -->
-  <a-plane id="pedestrainPath" position="-5 0 0" rotation="-90 0 0" scale="1 20 1" width="10" height="60" color="#A9A9A9"></a-plane>
+  <a-plane id="pedestrainPath" position="-5 0 0" rotation="-90 0 0" scale="1 10 1" width="10" height="60" color="#A9A9A9"></a-plane>
   <a-assets>
     <img id="walkpath" src="https://cdn.glitch.com/9233de66-b45d-4647-928d-3fa5216fb051%2Fwalkpath.png?1537453763817">
   </a-assets>
   <a-image id="pedestrainImg" src="#walkpath" position="-5 0.1 0" rotation="-90 0 0" width="6" height="6"></a-image>
   <a-image id="pedestrainImg2" src="#walkpath" position="-5 0.1 -100" rotation="-90 0 0" width="6" height="6"></a-image>
   <a-image id="pedestrainImg3" src="#walkpath" position="-5 0.1 -200" rotation="-90 0 0" width="6" height="6"></a-image>
+  <a-image id="pedestrainImg4" src="#walkpath" position="-5 0.1 -295" rotation="-90 0 0" width="6" height="6"></a-image>
   
   <!--   Red Path -->
-  <a-plane id="redPath" position="5 0 0" rotation="-90 0 0" scale="1 20 1" width="10" height="60" color="#a52a2a"></a-plane>
+  <a-plane id="redPath" position="5 0 0" rotation="-90 0 0" scale="1 10 1" width="10" height="60" color="#a52a2a"></a-plane>
   <a-assets>
     <img id="bike" src="https://cdn.glitch.com/9233de66-b45d-4647-928d-3fa5216fb051%2Fplain_bicycle_icon_large3.png?1537453157828">
   </a-assets>
   <a-image id="bikeImg" src="#bike" position="5 0.1 0" rotation="-90 0 0" width="7" height="7"></a-image>
   <a-image id="bikeImg2" src="#bike" position="5 0.1 -100" rotation="-90 0 0" width="7" height="7"></a-image>
   <a-image id="bikeImg3" src="#bike" position="5 0.1 -200" rotation="-90 0 0" width="7" height="7"></a-image>
+  <a-image id="bikeImg4" src="#bike" position="5 0.1 -295" rotation="-90 0 0" width="7" height="7"></a-image>
   
   <!-- Sky colour -->
   <a-sky color="#87cefa"></a-sky>
@@ -109,7 +111,7 @@
   </a-entity>
   
 <!-- Corrective Msg -->
-  <a-entity id="correctiveMsg" position="-5.5 8 9" rotation="25 45 0" visible="false">
+  <a-entity id="correctiveMsg" position="0 8 9" rotation="25 0 0" visible="false">
     <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" width="8" height="3" color="firebrick"
               material="opacity: 0.9; transparent: true"></a-plane>
     <a-text rotation="0 0 0" position="0 0 0" align="center"
@@ -165,11 +167,11 @@
        var encourageMsg = document.querySelector("#encourageMsg");
       encourageMsg.setAttribute('visible','true');
        person.emit('forward');
-       var delayInMilliseconds = 20000; //20 second
+       var delayInMilliseconds = 30000; //30 second
 
       setTimeout(function() {
-        //your code to be executed after 20 second
-        window.location.href = "sharedPathScene.html";
+        //your code to be executed after 30 second
+        window.location.href = "index.html";
       }, delayInMilliseconds);
        setTimeout();
      
@@ -178,20 +180,23 @@
    });
   </script>
   
+  <!--  Foot Path for next scene  -->
+  <a-plane id="pedestrainPath2" position="0 0 -450" rotation="-90 0 0" scale="1 5 1" width="20" height="60" color="#FFFAFA"></a-plane>
+  <a-image id="pedestrainImg5" src="#walkpath" position="0 0.1 -305" rotation="-90 0 0" width="6" height="6"></a-image>
+  <a-entity id="nextSceneMsg" position="0 5 -300" rotation="0 0 0">
+    <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" width="8" height="3" color="#00CED1"
+             material="opacity: 0.5; transparent: true"></a-plane>
+    <a-text position="0 0 0" align="center"
+            value="You will be redirected to the next scene.\nPlease hold on." width="10" height="10" color="#FFF"></a-text>
+  </a-entity>
+  
+  
   <a-entity id="option2" position="8 5 15" rotation="0 -85 0">
     <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" width="8" height="2" color="#a52a2a"
              material="opacity: 0.5; transparent: true"></a-plane>
     <a-text position="0 0 0" align="center"
             value="Hello, World! 3" width="10" height="10" color="#000000"></a-text>
   </a-entity>
-  
-  <!-- Link to go to ??? -->
-<!--   <a-assets>
-    <img id="startGame">
-  </a-assets>
-  <a-entity position="2 2 -293" link="href: sharedPathScene.html; title: Click for next question; 
-                                     titleColor: black; backgroundColor: lime;
-                                     visualAspectEnabled: true;"></a-entity> -->
   
 </a-scene>
 
