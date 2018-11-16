@@ -5,12 +5,6 @@
     <title>Hello, WebVR! • A-Frame</title>
     <meta name="description" content="Hello, WebVR! • A-Frame">
     <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
-    <script>
-    window.addEventListener('vrdisplayactivate', function() {
-      info.textContent = 'Display activated.';
-      reportDisplays();
-    });
-    </script>
   </head>
   <body>
     <!-- Position (-veleft/+veright, -veDown/+veUp, -veForward/+veBackward) -->
@@ -35,18 +29,22 @@
   </a-entity>
   
   <!--   Light Gray Path -->
-  <a-plane id="pedestrainPath" position="-5 0 0" rotation="-90 0 0" scale="1 10 1" width="10" height="60" color="#A9A9A9"></a-plane>
+  <a-plane id="pedestrainPath" position="-5 0 0" rotation="-90 0 0" scale="1 20 1" width="10" height="60" color="#A9A9A9"></a-plane>
   <a-assets>
     <img id="walkpath" src="https://cdn.glitch.com/9233de66-b45d-4647-928d-3fa5216fb051%2Fwalkpath.png?1537453763817">
   </a-assets>
   <a-image id="pedestrainImg" src="#walkpath" position="-5 0.1 0" rotation="-90 0 0" width="6" height="6"></a-image>
+  <a-image id="pedestrainImg2" src="#walkpath" position="-5 0.1 -100" rotation="-90 0 0" width="6" height="6"></a-image>
+  <a-image id="pedestrainImg3" src="#walkpath" position="-5 0.1 -200" rotation="-90 0 0" width="6" height="6"></a-image>
   
   <!--   Red Path -->
-  <a-plane id="redPath" position="5 0 0" rotation="-90 0 0" scale="1 10 1" width="10" height="60" color="#a52a2a"></a-plane>
+  <a-plane id="redPath" position="5 0 0" rotation="-90 0 0" scale="1 20 1" width="10" height="60" color="#a52a2a"></a-plane>
   <a-assets>
     <img id="bike" src="https://cdn.glitch.com/9233de66-b45d-4647-928d-3fa5216fb051%2Fplain_bicycle_icon_large3.png?1537453157828">
   </a-assets>
   <a-image id="bikeImg" src="#bike" position="5 0.1 0" rotation="-90 0 0" width="7" height="7"></a-image>
+  <a-image id="bikeImg2" src="#bike" position="5 0.1 -100" rotation="-90 0 0" width="7" height="7"></a-image>
+  <a-image id="bikeImg3" src="#bike" position="5 0.1 -200" rotation="-90 0 0" width="7" height="7"></a-image>
   
   <!-- Sky colour -->
   <a-sky color="#87cefa"></a-sky>
@@ -167,7 +165,14 @@
        var encourageMsg = document.querySelector("#encourageMsg");
       encourageMsg.setAttribute('visible','true');
        person.emit('forward');
-     // window.location.href = "tutorialView.html";
+       var delayInMilliseconds = 20000; //20 second
+
+      setTimeout(function() {
+        //your code to be executed after 20 second
+        window.location.href = "sharedPathScene.html";
+      }, delayInMilliseconds);
+       setTimeout();
+     
    });
    }
    });
@@ -181,12 +186,12 @@
   </a-entity>
   
   <!-- Link to go to ??? -->
-  <a-assets>
+<!--   <a-assets>
     <img id="startGame">
   </a-assets>
   <a-entity position="2 2 -293" link="href: sharedPathScene.html; title: Click for next question; 
                                      titleColor: black; backgroundColor: lime;
-                                     visualAspectEnabled: true;"></a-entity>
+                                     visualAspectEnabled: true;"></a-entity> -->
   
 </a-scene>
 
