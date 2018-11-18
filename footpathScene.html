@@ -27,6 +27,16 @@
                  fill="forwards"
                  to="0 2 -290"></a-animation>
   </a-entity>
+  <a-assets>
+    <img id="cyclist" src="https://cdn.glitch.com/9233de66-b45d-4647-928d-3fa5216fb051%2FHipsters.png?1542523720643">
+  </a-assets>
+  <a-image id="cyclistImg" src="#cyclist" position="8 4 -1000" rotation="0 0 0" width="7" height="7">
+           <a-animation attribute="position"
+               dur="60000"
+               fill="backwards"
+               to="0 0 1000"
+               repeat="indefinite"></a-animation>
+  </a-image>
   
   <!--   Light Gray Path -->
   <a-plane id="pedestrainPath" position="-5 0 305" rotation="-90 0 0" scale="1 10 1" width="10" height="60" color="#A9A9A9"></a-plane>
@@ -55,6 +65,9 @@
     <a-text position="0 0 0" align="center"
             value="You have come to the end of the game.\nYou will be redirected to the main page.\nPlease hold on." width="10" height="10" color="#FFF"></a-text>
   </a-entity>  
+  <a-entity rotation="0 0 0" scale="3 3 3" position="-13 0 -10"
+              collada-model="url(https://cdn.glitch.com/9233de66-b45d-4647-928d-3fa5216fb051%2FLow%2BPoly%2B3D%2BStanding%2BPeople.dae?1542522718012)">
+    </a-entity>
   
   <!-- Sky colour -->
   <a-sky color="#87cefa"></a-sky>  
