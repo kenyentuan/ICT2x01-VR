@@ -40,7 +40,7 @@
   AFRAME.registerComponent('increase-pednum',{
    init: function (){ 
      this.el.addEventListener('click', function (evt){
-     var type = document.querySelector("#pedstrianNum");
+     var type = document.querySelector("#pedestrianNum");
       var x = type.getAttribute('value');
        var y = "1";
        var z = +x + +y;
@@ -51,7 +51,7 @@
   AFRAME.registerComponent('decrease-pednum',{
    init: function (){ 
      this.el.addEventListener('click', function (evt){
-     var type = document.querySelector("#pedstrianNum");
+     var type = document.querySelector("#pedestrianNum");
       var x = type.getAttribute('value');
        var y = "1";
        var z = +x - +y;
@@ -231,20 +231,20 @@
            src="https://cdn.glitch.com/9233de66-b45d-4647-928d-3fa5216fb051%2Fminus.png?1542535368093"></a-image>
   </a-entity>
   
-<!--  Num of Pedstrian  -->
-  <a-entity id="pedstrianTitle" position="-4 3 8" rotation="0 30 0">
+<!--  Num of Pedestrian  -->
+  <a-entity id="pedestrianTitle" position="-4 3 8" rotation="0 30 0">
   <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" 
              width="4" height="1" color="salmon"
              material="opacity: 0.8; transparent: true"></a-plane>
     <a-text position="0 0.25 0" align="center"
-            value="Num of Pedstrian:" 
+            value="Num of Pedestrian:" 
             width="10" height="10" color="#FFF"></a-text>    
-    <a-text id="pedstrianNum" position="0 -0.25 0" align="center"
+    <a-text id="pedestrianNum" position="0 -0.25 0" align="center"
             value="0" 
             width="10" height="10" color="#000000"></a-text>    
-    <a-image id="pedstrianPlus" position="3 0 0" rotation="0 0 0" width="1" height="1" increase-pednum
+    <a-image id="pedestrianPlus" position="3 0 0" rotation="0 0 0" width="1" height="1" increase-pednum
            src="https://cdn.glitch.com/9233de66-b45d-4647-928d-3fa5216fb051%2Fadd-512.png?1542535368043"></a-image>
-    <a-image id="pedstrianMinus" position="-3 0 0" rotation="0 0 0" width="1" height="1" decrease-pednum
+    <a-image id="pedestrianMinus" position="-3 0 0" rotation="0 0 0" width="1" height="1" decrease-pednum
            src="https://cdn.glitch.com/9233de66-b45d-4647-928d-3fa5216fb051%2Fminus.png?1542535368093"></a-image>
   </a-entity>
   
