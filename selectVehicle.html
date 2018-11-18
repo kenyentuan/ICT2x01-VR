@@ -8,7 +8,17 @@
   </head>
   <body>
     <!-- Position (-veleft/+veright, -veDown/+veUp, -veForward/+veBackward) -->
-
+<!--   script for going to safety check bicyle   -->
+    <script>
+  AFRAME.registerComponent('select-bike',{
+   init: function (){ 
+     this.el.addEventListener('click', function (evt){
+        window.location.href = "safetyCheckBicycle.html";
+   });
+   }
+   });
+  </script>
+    
 <a-scene>
   
   <a-entity id="personView" position="0 2 15">
@@ -29,7 +39,7 @@
             value="Welcome to SafeReality" 
             width="10" height="10" color="#000000"></a-text>
     <a-text position="0 -0.5 0" align="center"
-            value="A project by Team 01 (ICT2x01)" 
+            value="*Please select a vehicle.*" 
             width="5" height="5" color="#000000"></a-text>
   </a-entity>
   
@@ -39,24 +49,32 @@
       <!--   Ground Path -->
   <a-plane id="greenPatch" position="0 -0.99999 0" rotation="-90 0 0" scale="1 20 1" width="60" height="60" color="#228b22"></a-plane>
   
-<!-- Link to go to sharedPathScene.html -->
+<!-- User select PMD -->
   <a-assets>
-    <img id="startGame">
+    <img id="pmd" src="https://cdn.glitch.com/9233de66-b45d-4647-928d-3fa5216fb051%2Fltapmd.JPG?1542527817021">
   </a-assets>
-  <a-entity position="0 5 8" rotation=" 0 0 0" link="href: sharedPathScene.html; title: Start Game; titleColor: black; backgroundColor: lime;"></a-entity>
+  <a-entity position="-1 4.5 12" rotation=" 0 0 0">    
+  <a-image id="pmdImg" src="#pmd" position="0 0 0" rotation="0 0 0" width="0.5" height="1"></a-image>
+  </a-entity> 
   
   
-  <!-- Link to go to tutorialView.html -->
+  <!-- User select Bicycle -->
   <a-assets>
-    <img id="startTutorial">
+    <img id="bike" src="https://cdn.glitch.com/9233de66-b45d-4647-928d-3fa5216fb051%2Fltabicycle.JPG?1542527816872">
   </a-assets>
-  <a-entity position="-5 5 8" rotation=" 0 45 0" link="href: tutorialView.html; title: Start Tutorial; titleColor: black; backgroundColor: orange	;"></a-entity> 
+  <a-entity position="0 4.5 12" rotation=" 0 0 0" select-bike>    
+  <a-image id="bikeImg" src="#bike" position="0 0 0" rotation="0 0 0" width="0.5" height="1"></a-image>
+  </a-entity> 
  
-  <!-- Link to go to sharedPathScene.html -->
+  <!-- User select PAB -->
   <a-assets>
-    <img id="startDesigner">
+    <img id="pab" src="https://cdn.glitch.com/9233de66-b45d-4647-928d-3fa5216fb051%2Fltapab.JPG?1542527817118">
   </a-assets>
-  <a-entity position="5 5 8" rotation=" 0 -45 0" link="href: sharedPathScene.html; title: For SCTF; titleColor: black; backgroundColor: red;"></a-entity>
+  <a-entity position="1 4.5 12" rotation=" 0 0 0">    
+  <a-image id="pabImg" src="#pab" position="0 0 0" rotation="0 0 0" width="0.5" height="1"></a-image>
+  </a-entity> 
+  
+  
     </a-scene>
 
   </body>
