@@ -113,6 +113,50 @@
    });
    }
    });
+  //Easy Level
+  AFRAME.registerComponent('easy',{
+   init: function (){ 
+     this.el.addEventListener('click', function (evt){
+     var veh = document.querySelector("#vehicleNum");
+       veh.setAttribute('value', '0');
+      var ped = document.querySelector("#pedstrianNum");
+       ped.setAttribute('value','0');
+       var choice = document.querySelector("#choicesNum");
+       choice.setAttribute('value','2');
+       var bg = document.querySelector("#bgNum");
+       bg.setAttribute('value','0');
+   });
+   }
+   });
+  // Changing bg type
+  AFRAME.registerComponent('normal',{
+   init: function (){ 
+     this.el.addEventListener('click', function (evt){
+     var veh = document.querySelector("#vehicleNum");
+       veh.setAttribute('value', '3');
+      var ped = document.querySelector("#pedstrianNum");
+       ped.setAttribute('value','1');
+       var choice = document.querySelector("#choicesNum");
+       choice.setAttribute('value','4');
+       var bg = document.querySelector("#bgNum");
+       bg.setAttribute('value','1');
+   });
+   }
+   });
+  AFRAME.registerComponent('hard',{
+   init: function (){ 
+     this.el.addEventListener('click', function (evt){
+     var veh = document.querySelector("#vehicleNum");
+       veh.setAttribute('value', '10');
+      var ped = document.querySelector("#pedstrianNum");
+       ped.setAttribute('value','10');
+       var choice = document.querySelector("#choicesNum");
+       choice.setAttribute('value','6');
+       var bg = document.querySelector("#bgNum");
+       bg.setAttribute('value','4');
+   });
+   }
+   });
   </script>
 <a-scene>
   
@@ -145,25 +189,27 @@
   <a-plane id="greenPatch" position="0 -0.99999 0" rotation="-90 0 0" scale="1 20 1" width="60" height="60" color="#228b22"></a-plane>
 
   <!--  Difficulty  -->
-  <a-entity id="difficultyTitle" position="0 6 8" rotation=" 0 0 0">
-    <a-plane position="-4 0 0" rotation="0 0 0" scale="1 1 1" 
+  <a-entity id="easyTitle" position="-4 6 8" rotation=" 0 0 0" easy>
+    <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" 
              width="3" height="1" color="limegreen"
              material="opacity: 0.5; transparent: true"></a-plane>
-    <a-text id="easyText" position="-4 0 0" align="center" easy
+    <a-text id="easyText" position="0 0 0" align="center" 
             value="Easy" 
             width="10" height="10" color="#FFF"></a-text>
-    
+    </a-entity>
+    <a-entity id="normalTitle" position="0 6 8" rotation=" 0 0 0" normal>
     <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" 
              width="3" height="1" color="orange"
              material="opacity: 0.5; transparent: true"></a-plane>
-    <a-text id="normalText" position="0 0 0" align="center" normal
+    <a-text id="normalText" position="0 0 0" align="center" 
             value="Normal" 
             width="10" height="10" color="#FFF"></a-text>
-    
-    <a-plane position="4 0 0" rotation="0 0 0" scale="1 1 1" 
+      </a-entity>
+    <a-entity id="hardTitle" position="4 6 8" rotation=" 0 0 0" hard>
+    <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" 
              width="3" height="1" color="red"
              material="opacity: 0.5; transparent: true"></a-plane>
-    <a-text id="hardText" position="4 0 0" align="center" hard
+    <a-text id="hardText" position="0 0 0" align="center" 
             value="Hard" 
             width="10" height="10" color="#FFF"></a-text>
   </a-entity>

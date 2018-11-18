@@ -8,112 +8,7 @@
   </head>
   <body>
     <!-- Position (-veleft/+veright, -veDown/+veUp, -veForward/+veBackward) -->
-    
-<!--   Script for changing items   -->
-<script>
-  // Changing vehicle num
-  AFRAME.registerComponent('increase-vehnum',{
-   init: function (){ 
-     this.el.addEventListener('click', function (evt){
-     var type = document.querySelector("#vehicleNum");
-      var x = type.getAttribute('value');
-       var y = "1";
-       var z = +x + +y;
-      type.setAttribute('value',z);
-   });
-   }
-   });
-  AFRAME.registerComponent('decrease-vehnum',{
-   init: function (){ 
-     this.el.addEventListener('click', function (evt){
-     var type = document.querySelector("#vehicleNum");
-      var x = type.getAttribute('value');
-       var y = "1";
-       var z = +x - +y;
-       if (z < 0)
-         z = "0";
-      type.setAttribute('value',z);
-   });
-   }
-   });
-  // Changing pedestrian num
-  AFRAME.registerComponent('increase-pednum',{
-   init: function (){ 
-     this.el.addEventListener('click', function (evt){
-     var type = document.querySelector("#pedstrianNum");
-      var x = type.getAttribute('value');
-       var y = "1";
-       var z = +x + +y;
-      type.setAttribute('value',z);
-   });
-   }
-   });
-  AFRAME.registerComponent('decrease-pednum',{
-   init: function (){ 
-     this.el.addEventListener('click', function (evt){
-     var type = document.querySelector("#pedstrianNum");
-      var x = type.getAttribute('value');
-       var y = "1";
-       var z = +x - +y;
-       if (z < 0)
-         z = "0";
-      type.setAttribute('value',z);
-   });
-   }
-   });
-  // Changing choices num
-  AFRAME.registerComponent('increase-choicesnum',{
-   init: function (){ 
-     this.el.addEventListener('click', function (evt){
-     var type = document.querySelector("#choicesNum");
-      var x = type.getAttribute('value');
-       var y = "1";
-       var z = +x + +y;
-      type.setAttribute('value',z);
-   });
-   }
-   });
-  AFRAME.registerComponent('decrease-choicesnum',{
-   init: function (){ 
-     this.el.addEventListener('click', function (evt){
-     var type = document.querySelector("#choicesNum");
-      var x = type.getAttribute('value');
-       var y = "1";
-       var z = +x - +y;
-       if (z < 2)
-         z = "2";
-      type.setAttribute('value',z);
-   });
-   }
-   });
-  // Changing bg type
-  AFRAME.registerComponent('increase-bgnum',{
-   init: function (){ 
-     this.el.addEventListener('click', function (evt){
-     var type = document.querySelector("#bgNum");
-      var x = type.getAttribute('value');
-       var y = "1";
-       var z = +x + +y;
-       if (z > 4)
-         z = "4";
-      type.setAttribute('value',z);
-   });
-   }
-   });
-  AFRAME.registerComponent('decrease-bgnum',{
-   init: function (){ 
-     this.el.addEventListener('click', function (evt){
-     var type = document.querySelector("#bgNum");
-      var x = type.getAttribute('value');
-       var y = "1";
-       var z = +x - +y;
-       if (z < 0)
-         z = "0";
-      type.setAttribute('value',z);
-   });
-   }
-   });
-  </script>
+
 <a-scene>
   
   <a-entity id="personView" position="0 2 15">
@@ -131,10 +26,10 @@
              width="8" height="2" color="#A9A9A9"
              material="opacity: 0.2; transparent: true"></a-plane>
     <a-text position="0 0 0" align="center"
-            value="Welcome to SafeReality (Designer View)" 
+            value="Welcome to SafeReality" 
             width="10" height="10" color="#000000"></a-text>
     <a-text position="0 -0.5 0" align="center"
-            value="*Use the buttons to increase and decrese the value.*" 
+            value="A project by Team 01 (ICT2x01)" 
             width="5" height="5" color="#000000"></a-text>
   </a-entity>
   
@@ -143,99 +38,25 @@
   <a-sky color="#87cefa"></a-sky>
       <!--   Ground Path -->
   <a-plane id="greenPatch" position="0 -0.99999 0" rotation="-90 0 0" scale="1 20 1" width="60" height="60" color="#228b22"></a-plane>
-
-  <!--  Difficulty  -->
-  <a-entity id="difficultyTitle" position="0 6 8" rotation=" 0 0 0">
-    <a-plane position="-4 0 0" rotation="0 0 0" scale="1 1 1" 
-             width="3" height="1" color="limegreen"
-             material="opacity: 0.5; transparent: true"></a-plane>
-    <a-text id="easyText" position="-4 0 0" align="center" easy
-            value="Easy" 
-            width="10" height="10" color="#FFF"></a-text>
-    
-    <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" 
-             width="3" height="1" color="orange"
-             material="opacity: 0.5; transparent: true"></a-plane>
-    <a-text id="normalText" position="0 0 0" align="center" normal
-            value="Normal" 
-            width="10" height="10" color="#FFF"></a-text>
-    
-    <a-plane position="4 0 0" rotation="0 0 0" scale="1 1 1" 
-             width="3" height="1" color="red"
-             material="opacity: 0.5; transparent: true"></a-plane>
-    <a-text id="hardText" position="4 0 0" align="center" hard
-            value="Hard" 
-            width="10" height="10" color="#FFF"></a-text>
-  </a-entity>
   
-<!--  Num of vehicles  -->
-  <a-entity id="vehiclesTitle" position="-4 4.5 8" rotation="0 30 0">
-  <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" 
-             width="4" height="1" color="limegreen"
-             material="opacity: 0.5; transparent: true"></a-plane>
-    <a-text position="0 0.25 0" rotation="0 0 0" align="center"
-            value="Num of Vehicle:" 
-            width="10" height="10" color="#FFF"></a-text>    
-    <a-text id="vehicleNum" position="0 -0.25 0" rotation="0 0 0" align="center"
-            value="0" 
-            width="10" height="10" color="#000000"></a-text>    
-    <a-image id="vehiclePlus" position="3 0 0" rotation="0 0 0" width="1" height="1" increase-vehnum
-           src="https://cdn.glitch.com/9233de66-b45d-4647-928d-3fa5216fb051%2Fadd-512.png?1542535368043"></a-image>
-    <a-image id="vehicleMinus" position="-3 0 0" rotation="0 0 0" width="1" height="1" decrease-vehnum
-           src="https://cdn.glitch.com/9233de66-b45d-4647-928d-3fa5216fb051%2Fminus.png?1542535368093"></a-image>
-  </a-entity>
+<!-- Link to go to sharedPathScene.html -->
+  <a-assets>
+    <img id="startGame">
+  </a-assets>
+  <a-entity position="0 5 8" rotation=" 0 0 0" link="href: selectVehicle.html; title: Start Game; titleColor: black; backgroundColor: lime;"></a-entity>
   
-<!--  Num of Pedstrian  -->
-  <a-entity id="pedstrianTitle" position="-4 3 8" rotation="0 30 0">
-  <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" 
-             width="4" height="1" color="salmon"
-             material="opacity: 0.8; transparent: true"></a-plane>
-    <a-text position="0 0.25 0" align="center"
-            value="Num of Pedstrian:" 
-            width="10" height="10" color="#FFF"></a-text>    
-    <a-text id="pedstrianNum" position="0 -0.25 0" align="center"
-            value="0" 
-            width="10" height="10" color="#000000"></a-text>    
-    <a-image id="pedstrianPlus" position="3 0 0" rotation="0 0 0" width="1" height="1" increase-pednum
-           src="https://cdn.glitch.com/9233de66-b45d-4647-928d-3fa5216fb051%2Fadd-512.png?1542535368043"></a-image>
-    <a-image id="pedstrianMinus" position="-3 0 0" rotation="0 0 0" width="1" height="1" decrease-pednum
-           src="https://cdn.glitch.com/9233de66-b45d-4647-928d-3fa5216fb051%2Fminus.png?1542535368093"></a-image>
-  </a-entity>
   
-<!--  Num of Choices  -->
-  <a-entity id="choicesTitle" position="4 4.5 8" rotation="0 -30 0">
-  <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" 
-             width="4" height="1" color="limegreen"
-             material="opacity: 0.5; transparent: true"></a-plane>
-    <a-text position="0 0.25 0" align="center"
-            value="Num of Choices:" 
-            width="10" height="10" color="#FFF"></a-text>    
-    <a-text id="choicesNum" position="0 -0.25 0" align="center"
-            value="2" 
-            width="10" height="10" color="#000000"></a-text>    
-    <a-image id="choicesPlus" position="3 0 0" rotation="0 0 0" width="1" height="1" increase-choicesnum
-           src="https://cdn.glitch.com/9233de66-b45d-4647-928d-3fa5216fb051%2Fadd-512.png?1542535368043"></a-image>
-    <a-image id="choicesMinus" position="-3 0 0" rotation="0 0 0" width="1" height="1" decrease-choicesnum
-           src="https://cdn.glitch.com/9233de66-b45d-4647-928d-3fa5216fb051%2Fminus.png?1542535368093"></a-image>
-  </a-entity>
-  
-<!--  Background Environment  -->
-  <a-entity id="bgTitle" position="4 3 8" rotation="0 -30 0">
-  <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" 
-             width="4" height="1" color="salmon"
-             material="opacity: 0.8; transparent: true"></a-plane>
-    <a-text position="0 0.25 0" align="center"
-            value="Background Type:" 
-            width="10" height="10" color="#FFF"></a-text>    
-    <a-text id="bgNum" position="0 -0.25 0" align="center"
-            value="0" 
-            width="10" height="10" color="#000000"></a-text>    
-    <a-image id="bgPlus" position="3 0 0" rotation="0 0 0" width="1" height="1" increase-bgnum
-           src="https://cdn.glitch.com/9233de66-b45d-4647-928d-3fa5216fb051%2Fadd-512.png?1542535368043"></a-image>
-    <a-image id="bgMinus" position="-3 0 0" rotation="0 0 0" width="1" height="1" decrease-bgnum
-           src="https://cdn.glitch.com/9233de66-b45d-4647-928d-3fa5216fb051%2Fminus.png?1542535368093"></a-image>
-  </a-entity>
-  
+  <!-- Link to go to tutorialView.html -->
+  <a-assets>
+    <img id="startTutorial">
+  </a-assets>
+  <a-entity position="-5 5 8" rotation=" 0 45 0" link="href: tutorialView.html; title: Start Tutorial; titleColor: black; backgroundColor: orange	;"></a-entity> 
+ 
+  <!-- Link to go to sharedPathScene.html -->
+  <a-assets>
+    <img id="startDesigner">
+  </a-assets>
+  <a-entity position="5 5 8" rotation=" 0 -45 0" link="href: designerView.html; title: For SCTF (For Showcase); titleColor: black; backgroundColor: red;"></a-entity>
     </a-scene>
 
   </body>
