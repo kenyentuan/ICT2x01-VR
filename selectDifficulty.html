@@ -9,6 +9,7 @@
   <body>
     <!-- Position (-veleft/+veright, -veDown/+veUp, -veForward/+veBackward) -->
 
+    
 <a-scene>
   
   <a-entity id="personView" position="0 2 15">
@@ -29,7 +30,7 @@
             value="Welcome to SafeReality" 
             width="10" height="10" color="#000000"></a-text>
     <a-text position="0 -0.5 0" align="center"
-            value="A project by Team 01 (ICT2x01)" 
+            value="*Select difficulty level.*" 
             width="5" height="5" color="#000000"></a-text>
   </a-entity>
   
@@ -41,22 +42,22 @@
   
 <!-- Link to go to sharedPathScene.html -->
   <a-assets>
-    <img id="startGame">
+    <img id="easyGame">
   </a-assets>
-  <a-entity position="0 5 8" rotation=" 0 0 0" link="href: sharedPathScene.html; title: Start Game; titleColor: black; backgroundColor: lime;"></a-entity>
+  <a-entity position="0 5 8" rotation=" 0 0 0" link="href: sharedPathScene.html; title: Easy Game; titleColor: black; backgroundColor: lime;"></a-entity>
   
   
   <!-- Link to go to tutorialView.html -->
   <a-assets>
-    <img id="startTutorial">
+    <img id="normalGame">
   </a-assets>
-  <a-entity position="-5 5 8" rotation=" 0 45 0" link="href: tutorialView.html; title: Start Tutorial; titleColor: black; backgroundColor: orange	;"></a-entity> 
+  <a-entity position="-5 5 8" rotation=" 0 45 0" link="href: sharedPathScene.html; title: Normal Game; titleColor: black; backgroundColor: orange	;"></a-entity> 
  
   <!-- Link to go to sharedPathScene.html -->
   <a-assets>
-    <img id="startDesigner">
+    <img id="hardGame">
   </a-assets>
-  <a-entity position="5 5 8" rotation=" 0 -45 0" link="href: sharedPathScene.html; title: For SCTF; titleColor: black; backgroundColor: red;"></a-entity>
+  <a-entity position="5 5 8" rotation=" 0 -45 0" link="href: sharedPathScene.html; title: Hard Game; titleColor: black; backgroundColor: red;"></a-entity>
     </a-scene>
 
   </body>
