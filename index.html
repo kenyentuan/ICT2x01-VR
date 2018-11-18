@@ -25,7 +25,7 @@
                  delay="5000"
                  dur="25000"
                  fill="forwards"
-                 to="2 2 -290"></a-animation>
+                 to="0 2 -290"></a-animation>
   </a-entity>
   
   <!--   Light Gray Path -->
@@ -44,14 +44,16 @@
   <a-image id="bikeImg" src="#bike" position="5 0.1 10" rotation="-90 0 0" width="7" height="7"></a-image>
   <a-image id="bikeImg2" src="#bike" position="5 0.1 110" rotation="-90 0 0" width="7" height="7"></a-image>
   
-   <!--  Foot Path for next scene  -->
+   <!--  Foot Path for this scene  -->
   <a-plane id="pedestrainPath2" position="0 0 -295" rotation="-90 0 0" scale="1 10 1" width="20" height="60" color="#FFFAFA"></a-plane>
   <a-image id="pedestrainImg5" src="#walkpath" position="0 0.1 -5" rotation="-90 0 0" width="6" height="6"></a-image>
+  <a-image id="pedestrainImg6" src="#walkpath" position="0 0.1 -100" rotation="-90 0 0" width="6" height="6"></a-image>
+  <a-image id="pedestrainImg7" src="#walkpath" position="0 0.1 -290" rotation="-90 0 0" width="6" height="6"></a-image>
   <a-entity id="nextSceneMsg" position="0 5 -300" rotation="0 0 0">
     <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" width="8" height="3" color="#00CED1"
              material="opacity: 0.5; transparent: true"></a-plane>
     <a-text position="0 0 0" align="center"
-            value="You will be redirected to the next scene.\nPlease hold on." width="10" height="10" color="#FFF"></a-text>
+            value="You have come to the end of the game.\nYou will be redirected to the main page.\nPlease hold on." width="10" height="10" color="#FFF"></a-text>
   </a-entity>  
   
   <!-- Sky colour -->
@@ -68,6 +70,9 @@
   
   <!--   Road Path -->
   <a-plane id="road" position="24 0 0" rotation="-90 0 0" scale="1.5 20 1" width="15" height="60" color="#708090"></a-plane>
+  
+  <!--   Small road Path -->
+  <a-plane id="smallRoad" position="0 0 0" rotation="90 0 0" scale="1.5 20 1" width="60" height="15" color="#708090"></a-plane>
 
   <!-- Car box. -->
   <a-entity id="car" position = "0 0 360">
@@ -104,7 +109,7 @@
              width="8" height="2" color="#A9A9A9"
              material="opacity: 0.5; transparent: true"></a-plane>
     <a-text position="0 0 0" align="center"
-            value="Which path should you take?" width="10" height="10" color="#000000"></a-text>
+            value="You are approaching a foot (white) path.\nWhat should you do?" width="10" height="10" color="#000000"></a-text>
   </a-entity>
   
   <!--  Option 1  -->
@@ -141,7 +146,7 @@
   <a-entity id="option1" position="-8 5 15" rotation="0 85 0">
     <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" width="6" height="2" color="#6495ed"></a-plane>
     <a-text rotation="0 0 0" position="0 0 0" align="center"
-            value="Hello, World! 1" width="10" height="10" color="#000000">
+            value="Ride recklessly and\n cut the pedestrian." width="8" height="10" color="#000000">
       <a-animation begin="click" attribute="color" from="#000000" to="#228B22"></a-animation>
     </a-text>
   </a-entity>
@@ -160,9 +165,16 @@
     <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" width="12" height="3" color="lime"
               material="opacity: 0.9; transparent: true"></a-plane>
     <a-text rotation="0 0 0" position="0 0 0" align="center"
-            value="You are correct!\n\nAlways keep left on the red path and within the speed limit. *You will be moving in 5 seconds.*" 
+            value="You are correct!\n\nWalk your device in crowded areas and gently alert others before overtaking. \n*You will be moving in 5 seconds.*" 
             width="10" height="10" color="white">
     </a-text>
+  </a-entity>
+  
+    <a-entity id="option2" position="8 5 15" rotation="0 -85 0">
+    <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" width="8" height="2" color="#a52a2a"
+             material="opacity: 0.5; transparent: true"></a-plane>
+    <a-text position="0 0 0" align="center"
+            value="Always give way to pedestrians. \nDismount and push your device when crowded." width="8" height="10" color="#000000"></a-text>
   </a-entity>
   
   <script>
@@ -184,14 +196,7 @@
    });
    }
    });
-  </script>  
-  
-  <a-entity id="option2" position="8 5 15" rotation="0 -85 0">
-    <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" width="8" height="2" color="#a52a2a"
-             material="opacity: 0.5; transparent: true"></a-plane>
-    <a-text position="0 0 0" align="center"
-            value="Hello, World! 3" width="10" height="10" color="#000000"></a-text>
-  </a-entity>
+  </script> 
   
 </a-scene>
 
