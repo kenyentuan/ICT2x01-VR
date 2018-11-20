@@ -63,7 +63,7 @@
     <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" width="8" height="3" color="#00CED1"
              material="opacity: 0.5; transparent: true"></a-plane>
     <a-text position="0 0 0" align="center"
-            value="You have come to the end of the game.\nYou will be redirected to the main page.\nPlease hold on." width="10" height="10" color="#FFF"></a-text>
+            value="Congratulations!\nYou have come to the end of this demo.\nRedirecting to main page..." width="10" height="10" color="#FFF"></a-text>
   </a-entity>  
   <a-entity rotation="0 0 0" scale="3 3 3" position="-13 0 -10"
               collada-model="url(https://cdn.glitch.com/9233de66-b45d-4647-928d-3fa5216fb051%2FLow%2BPoly%2B3D%2BStanding%2BPeople.dae?1542522718012)">
@@ -119,10 +119,10 @@
 <!-- Question for the scene -->
   <a-entity id="question" position="0 5 8" rotation="0 0 0">
     <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" 
-             width="8" height="2" color="#A9A9A9"
+             width="8" height="2.5" color="#A9A9A9"
              material="opacity: 0.5; transparent: true"></a-plane>
     <a-text position="0 0 0" align="center"
-            value="You are approaching a foot (white) path.\nWhat should you do?" width="10" height="10" color="#000000"></a-text>
+            value="Objective of gameplay\nSelect the right answer.\n\nYou are approaching the footpath.\nWhat should you do?" width="10" height="10" color="#000000"></a-text>
   </a-entity>
   
   <!--  Option 1  -->
@@ -136,10 +136,10 @@
   
 <!-- Corrective Msg -->
   <a-entity id="correctiveMsg" position="0 8 9" rotation="25 0 0" visible="false">
-    <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" width="8" height="3" color="firebrick"
+    <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" width="10" height="3" color="firebrick"
               material="opacity: 0.9; transparent: true"></a-plane>
     <a-text rotation="0 0 0" position="0 0 0" align="center"
-            value="Sorry, you got the wrong answer!\n*Click to dismiss*" 
+            value="Wrong answer chosen!\nTry harder next time.\nCyclist should not ride on crowded shared path.\n*Click to dismiss*" 
             width="10" height="10" color="white">
     </a-text>
     <a-animation begin="click" attribute="visible" to="false"></a-animation>
@@ -159,7 +159,7 @@
   <a-entity id="option1" position="-8 5 15" rotation="0 85 0">
     <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" width="6" height="2" color="#6495ed"></a-plane>
     <a-text rotation="0 0 0" position="0 0 0" align="center"
-            value="Ride recklessly and\n cut the pedestrian." width="8" height="10" color="#000000">
+            value="Option #1\nContinue riding and\n speed past the pedestrians" width="8" height="10" color="#000000">
     </a-text>
   </a-entity>
   
@@ -177,7 +177,7 @@
     <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" width="12" height="3" color="lime"
               material="opacity: 0.9; transparent: true"></a-plane>
     <a-text rotation="0 0 0" position="0 0 0" align="center"
-            value="You are correct!\n\nWalk your device in crowded areas and gently alert others before overtaking. \n*You will be moving in 5 seconds.*" 
+            value="Correct answer chosen!\nKeep it up!\n\nReason: Cyclist should walk his/her bicycle in crowded areas and gently alert other users of the same path before overtaking.\n*You will be moving in 5 seconds.*" 
             width="10" height="10" color="white">
     </a-text>
   </a-entity>
@@ -186,7 +186,7 @@
     <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" width="8" height="2" color="#a52a2a"
              material="opacity: 0.5; transparent: true"></a-plane>
     <a-text position="0 0 0" align="center"
-            value="Always give way to pedestrians. \nDismount and push your device when crowded." width="8" height="10" color="#000000"></a-text>
+            value="Option #2\nDismount and push vehicle" width="8" height="10" color="#000000"></a-text>
   </a-entity>
   
   <script>
