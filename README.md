@@ -1,50 +1,78 @@
-<h1>SafeReality</h1>
+<img src="https://cdn.glitch.com/9233de66-b45d-4647-928d-3fa5216fb051%2FSafeRealityLogo.jpg?1542859091160" width="350" title="Safe Reality Application">
 
-<p align="center">
-  <img src="https://cdn.glitch.com/9233de66-b45d-4647-928d-3fa5216fb051%2FSafeRealityLogo.jpg?1542859091160" width="350" title="hover text">
-</p>
+***
 
-<h2>Introduction</h2>
-<p align="justify">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel scelerisque leo. Aliquam aliquam est nec finibus placerat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras ut mollis turpis. Nullam in diam at lectus placerat suscipit vel eu nulla. Vivamus porttitor ante dictum, semper enim euismod, commodo ante. Duis nec nunc gravida, ornare tortor gravida, cursus purus. Aenean eros lacus, sodales eget nisl id, varius ultrices est. Nam dictum posuere vestibulum. Donec vulputate tincidunt eros commodo faucibus. Nulla sit amet dui ac turpis finibus aliquam nec nec lectus. Nunc elementum ullamcorper dui at malesuada. Donec pretium est ac neque elementum, sit amet condimentum erat tempor. Fusce vehicula finibus justo et malesuada. Ut scelerisque elementum est id ornare. Curabitur bibendum nisl neque, sollicitudin suscipit nibh pellentesque porttitor.
-</p>
+# Introduction
+> 
+**SafeReality** is a virtual reality (VR) game that aims to promote safe riding amongst the riding community in Singapore through an interactive gameplay in a virtual environment (VE). 
 
-<p align="justify">
-Proin non consequat lectus. Fusce tristique pretium diam vitae ullamcorper. Curabitur metus est, sodales non est sit amet, condimentum semper erat. Maecenas vestibulum, velit et fermentum molestie, metus augue ullamcorper enim, ac volutpat mauris mi eu quam. Mauris a consequat ipsum. Vestibulum sit amet tellus quis ex congue consectetur id a nisl. Duis vel arcu quis urna accumsan luctus.
-</p>
+>
+This VR game consists a tutorial to orientate the players of the game, different difficulty levels (e.g. Easy, Normal, Hard) and a designer interface for Safe Cycling Task Force (SCTF) members to modify the environmental variables within the game to increase or decrease the difficulty and interactivity of the game play. 
 
-<h2>Objectives</h2>
-<p align="justify">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel scelerisque leo. Aliquam aliquam est nec finibus placerat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras ut mollis turpis. Nullam in diam at lectus placerat suscipit vel eu nulla. Vivamus porttitor ante dictum, semper enim euismod, commodo ante. Duis nec nunc gravida, ornare tortor gravida, cursus purus. Aenean eros lacus, sodales eget nisl id, varius ultrices est. Nam dictum posuere vestibulum. Donec vulputate tincidunt eros commodo faucibus. Nulla sit amet dui ac turpis finibus aliquam nec nec lectus. Nunc elementum ullamcorper dui at malesuada. Donec pretium est ac neque elementum, sit amet condimentum erat tempor. Fusce vehicula finibus justo et malesuada. Ut scelerisque elementum est id ornare. Curabitur bibendum nisl neque, sollicitudin suscipit nibh pellentesque porttitor.
-</p>
+*** 
 
-<h2>Guide: How to Play SafeReality?</h2>
-<h3>For Player</h3>
-<p align="justify">
-Proin non consequat lectus. Fusce tristique pretium diam vitae ullamcorper. Curabitur metus est, sodales non est sit amet, condimentum semper erat. Maecenas vestibulum, velit et fermentum molestie, metus augue ullamcorper enim, ac volutpat mauris mi eu quam. Mauris a consequat ipsum. Vestibulum sit amet tellus quis ex congue consectetur id a nisl. Duis vel arcu quis urna accumsan luctus.
-</p>
+# Game Features
+* Tutorial Mode
+* Scenario Game Based
+* Designer Interface for SCTF Members
 
-<h3>For SCTF Player</h3>
-<p align="justify">
-Proin non consequat lectus. Fusce tristique pretium diam vitae ullamcorper. Curabitur metus est, sodales non est sit amet, condimentum semper erat. Maecenas vestibulum, velit et fermentum molestie, metus augue ullamcorper enim, ac volutpat mauris mi eu quam. Mauris a consequat ipsum. Vestibulum sit amet tellus quis ex congue consectetur id a nisl. Duis vel arcu quis urna accumsan luctus.
-</p>
 
-<h2>Frequently Asked Questions (FAQ)</h2>
-<h4>Question 1</h4>
-<p align="justify">
-Proin non consequat lectus. Fusce tristique pretium diam vitae ullamcorper. Curabitur metus est, sodales non est sit amet, condimentum semper erat. Maecenas vestibulum, velit et fermentum molestie, metus augue ullamcorper enim, ac volutpat mauris mi eu quam. Mauris a consequat ipsum. Vestibulum sit amet tellus quis ex congue consectetur id a nisl. Duis vel arcu quis urna accumsan luctus.
-</p>
+***
 
-<h4>Question 2</h4>
-<p align="justify">
-Proin non consequat lectus. Fusce tristique pretium diam vitae ullamcorper. Curabitur metus est, sodales non est sit amet, condimentum semper erat. Maecenas vestibulum, velit et fermentum molestie, metus augue ullamcorper enim, ac volutpat mauris mi eu quam. Mauris a consequat ipsum. Vestibulum sit amet tellus quis ex congue consectetur id a nisl. Duis vel arcu quis urna accumsan luctus.
-</p>
+# Guide: How to Play SafeReality?
+> 
+Setting up SafeReality game with a virtual reality device is easy! 
+1. Download SafeReality game from the GitHub repository
+> 1.1 <<Insert URL here>>
 
-<h4>Question 3</h4>
-<p align="justify">
-Proin non consequat lectus. Fusce tristique pretium diam vitae ullamcorper. Curabitur metus est, sodales non est sit amet, condimentum semper erat. Maecenas vestibulum, velit et fermentum molestie, metus augue ullamcorper enim, ac volutpat mauris mi eu quam. Mauris a consequat ipsum. Vestibulum sit amet tellus quis ex congue consectetur id a nisl. Duis vel arcu quis urna accumsan luctus.
-</p>
 
-<h2>Feedbacks/Bugs Reporting</h2>
-<p align="justify">Please provide your feedbacks and report on bugs found in SafeReality 
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSfTCzxHlmLBTDJzQ5-XcXZc1b_8I22vrUhUSR8NgNNsQaKoXQ/viewform?embedded=true">here</a>. Thank you!</p>
+2. Click SafeReality application 
+3. Place mobile device into compatible virtual reality device
+4. Your virtuality reality adventure begins with SafeReality!
+
+### For Player
+1. If you are unfamiliar with SafeReality, please select "**Tutorial mode**" 
+2. Once done, please proceed to the game by selecting "**Start Gameplay**"
+3. Select the "**Vehicle Type**" 
+4. Conduct safety checks on selected vehicle, when done select "**Submit**"
+5. Proceed by selecting "**Difficulty Level**"
+6. The scenarios will be shown based on the selections above
+
+
+> 
+Once the above steps have been completed, you will enter the game mode and will be shown different questions based on the difficulty level and vehicle type you have chosen. Proceed by analysing and understand the scenarios to interact with the game and learn as you go along the game. Enjoy!
+
+### For SCTF Player
+1. From the main menu, select "**Designer Interface**"
+2. Once done, the difficulty levels and environmental variables will be shown
+3. Choose the relevant difficulty level that you wish to modify
+4. **Increase** or **decrease** the environmental variables with the **+** or **-** buttons
+5. Once done, select "**Back to Home**"
+6. All settings will automatically be saved
+
+> 
+Once the above steps have been completed, the environmental variables will be updated according to the different difficulty levels. The player will be able to see these updates when they play the game. 
+
+*** 
+
+# Frequently Asked Questions 
+### 1. What is virtual reality?
+> 
+Virtual Reality (VR) is the computer-generated simulation of a three-dimensional image or environment that can be interacted with in a seemingly real or physical way by a person using a headset and/or controllers.
+
+### 2. How do I experience virtual reality environment? 
+> 
+A virtual reality (VR) headset device is required to experience VR environment. Some VR devices that are supported by SafeReality are Google Cardboard, Google Cardboard V2, Oculus Go, and PlayStation VR.
+
+### 3. Does SafeReality adheres to Singapore cycling policies?
+> 
+SafeReality adheres to Land Transport Authority (LTA) cycling policy. When LTA updates the cycling policy, SafeReality will also update the game based on the new policies specified by LTA. Find out more <a href="https://www.lta.gov.sg/content/dam/ltaweb/corp/GreenTransport/files/Your%20Guide%20to%20Intra-Town%20Cycling.pdf">**here**</a>.
+
+
+*** 
+
+# Feedbacks
+> 
+Please provide your feedbacks about SafeReality <a href="https://docs.google.com/forms/d/e/1FAIpQLSfTCzxHlmLBTDJzQ5-XcXZc1b_8I22vrUhUSR8NgNNsQaKoXQ/viewform?embedded=true">**here**</a>. Thank you!
+
+
