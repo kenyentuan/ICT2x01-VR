@@ -70,7 +70,7 @@
     </a-entity>
   
   <!-- Sky colour -->
-  <a-sky color="#87cefa"></a-sky>  
+  <a-sky color="midnightblue"></a-sky>  
   
   <!--   Side Path -->
   <a-box id="leftSide" position="-11.5 0 0" rotation="-90 0 0" scale="1.5 20 1.5" width="2" height="60" color="#d3d3d3"></a-box>
@@ -126,14 +126,73 @@
   </a-entity>
   
   <!--  Option 1  -->
-  <a-entity id="option1Select" position="-5.5 5 8" rotation="0 45 0" show-corrective-msg>
+  <a-entity id="option1Select" position="-5.5 6 8" rotation="0 45 0" show-corrective-msg>
     <a-text rotation="0 0 0" position="0 0 0" align="center"
             value="Option 1" 
             width="10" height="10" color="white">
     </a-text>
     <a-circle color="#6495ed" radius="1"></a-circle>
   </a-entity>
+
   
+  <a-entity id="option1" position="-8 6.5 15" rotation="0 85 0">
+    <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" width="6" height="2" color="#6495ed"></a-plane>
+    <a-text rotation="0 0 0" position="0 0 0" align="center"
+            value="Option #1\nContinue riding and\n speed past the pedestrians" width="8" height="10" color="#000000">
+    </a-text>
+  </a-entity>
+  
+    
+  <!--  Option 3  -->
+  <a-entity id="option3Select" position="-5.5 4 8" rotation="0 45 0" show-corrective-msg>
+    <a-text rotation="0 0 0" position="0 0 0" align="center"
+            value="Option 3" 
+            width="10" height="10" color="white">
+    </a-text>
+    <a-circle color="#40E0D0" radius="1"></a-circle>
+  </a-entity>
+
+  
+  <a-entity id="option3" position="-8 4 15" rotation="0 85 0">
+    <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" width="6" height="2" color="#40E0D0"></a-plane>
+    <a-text rotation="0 0 0" position="0 0 0" align="center"
+            value="Option #3\nCrash into the pedestrians" width="8" height="10" color="#000000">
+    </a-text>
+  </a-entity>
+  
+  
+<!--  Option 2  -->
+  <a-entity id="option2Select" position="5.5 6 8" rotation="0 -45 0" next-scene>
+    <a-text rotation="0 0 0" position="0 0 0" align="center"
+            value="Option 2" 
+            width="10" height="10" color="white">
+    </a-text>
+    <a-circle color="#a52a2a" radius="1"></a-circle>
+  </a-entity>
+  
+  <a-entity id="option2" position="8 6.5 15" rotation="0 -85 0">
+    <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" width="8" height="2" color="#a52a2a"
+             material="opacity: 0.5; transparent: true"></a-plane>
+    <a-text position="0 0 0" align="center"
+            value="Option #2\nDismount and push vehicle" width="8" height="10" color="#000000"></a-text>
+  </a-entity>
+  
+  <!--  Option 4  -->
+  <a-entity id="option4Select" position="5.5 4 8" rotation="0 -45 0" show-corrective-msg>
+    <a-text rotation="0 0 0" position="0 0 0" align="center"
+            value="Option 4" 
+            width="10" height="10" color="white">
+    </a-text>
+    <a-circle color="#9370DB" radius="1"></a-circle>
+  </a-entity>
+  
+  <a-entity id="option4" position="8 4 15" rotation="0 -85 0">
+    <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" width="8" height="2" color="#9370DB"
+             material="opacity: 0.5; transparent: true"></a-plane>
+    <a-text position="0 0 0" align="center"
+            value="Option #4\nCrash into the cyclists" width="8" height="10" color="#000000"></a-text>
+  </a-entity>  
+
 <!-- Corrective Msg -->
   <a-entity id="correctiveMsg" position="0 8 9" rotation="25 0 0" visible="false">
     <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" width="10" height="3" color="firebrick"
@@ -156,22 +215,6 @@
    });
   </script>
   
-  <a-entity id="option1" position="-8 5 15" rotation="0 85 0">
-    <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" width="6" height="2" color="#6495ed"></a-plane>
-    <a-text rotation="0 0 0" position="0 0 0" align="center"
-            value="Option #1\nContinue riding and\n speed past the pedestrians" width="8" height="10" color="#000000">
-    </a-text>
-  </a-entity>
-  
-<!--  Option 2  -->
-  <a-entity id="option2Select" position="5.5 5 8" rotation="0 -45 0" next-scene>
-    <a-text rotation="0 0 0" position="0 0 0" align="center"
-            value="Option 2" 
-            width="10" height="10" color="white">
-    </a-text>
-    <a-circle color="#a52a2a" radius="1"></a-circle>
-  </a-entity>
-  
   <!-- Encouraging Msg -->
   <a-entity id="encourageMsg" position="0 8 9" rotation="25 0 0" visible="false">
     <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" width="12" height="4" color="lime"
@@ -180,13 +223,6 @@
             value="Correct answer chosen!\nKeep it up!\n\nReason: Cyclist should walk his/her bicycle in crowded areas and gently alert other users of the same path before overtaking.\n*You will be moving in 5 seconds.*" 
             width="10" height="10" color="white">
     </a-text>
-  </a-entity>
-  
-    <a-entity id="option2" position="8 5 15" rotation="0 -85 0">
-    <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" width="8" height="2" color="#a52a2a"
-             material="opacity: 0.5; transparent: true"></a-plane>
-    <a-text position="0 0 0" align="center"
-            value="Option #2\nDismount and push vehicle" width="8" height="10" color="#000000"></a-text>
   </a-entity>
   
   <script>

@@ -25,31 +25,52 @@
                  delay="5000"
                  dur="25000"
                  fill="forwards"
-                 to="2 2 -290"></a-animation>
+                 to="0 2 -290"></a-animation>
   </a-entity>
+  <a-assets>
+    <img id="cyclist" src="https://cdn.glitch.com/9233de66-b45d-4647-928d-3fa5216fb051%2FHipsters.png?1542523720643">
+  </a-assets>
+  <a-image id="cyclistImg" src="#cyclist" position="8 4 -1000" rotation="0 0 0" width="7" height="7">
+           <a-animation attribute="position"
+               dur="100000"
+               fill="backwards"
+               to="0 0 1000"
+               repeat="indefinite"></a-animation>
+  </a-image>
   
   <!--   Light Gray Path -->
-  <a-plane id="pedestrainPath" position="-5 0 0" rotation="-90 0 0" scale="1 10 1" width="10" height="60" color="#A9A9A9"></a-plane>
+  <a-plane id="pedestrainPath" position="-5 0 305" rotation="-90 0 0" scale="1 10 1" width="10" height="60" color="#A9A9A9"></a-plane>
   <a-assets>
     <img id="walkpath" src="https://cdn.glitch.com/9233de66-b45d-4647-928d-3fa5216fb051%2Fwalkpath.png?1537453763817">
   </a-assets>
-  <a-image id="pedestrainImg" src="#walkpath" position="-5 0.1 0" rotation="-90 0 0" width="6" height="6"></a-image>
-  <a-image id="pedestrainImg2" src="#walkpath" position="-5 0.1 -100" rotation="-90 0 0" width="6" height="6"></a-image>
-  <a-image id="pedestrainImg3" src="#walkpath" position="-5 0.1 -200" rotation="-90 0 0" width="6" height="6"></a-image>
-  <a-image id="pedestrainImg4" src="#walkpath" position="-5 0.1 -295" rotation="-90 0 0" width="6" height="6"></a-image>
+  <a-image id="pedestrainImg" src="#walkpath" position="-5 0.1 10" rotation="-90 0 0" width="6" height="6"></a-image>
+  <a-image id="pedestrainImg2" src="#walkpath" position="-5 0.1 110" rotation="-90 0 0" width="6" height="6"></a-image>
   
   <!--   Red Path -->
-  <a-plane id="redPath" position="5 0 0" rotation="-90 0 0" scale="1 10 1" width="10" height="60" color="#a52a2a"></a-plane>
+  <a-plane id="redPath" position="5 0 305" rotation="-90 0 0" scale="1 10 1" width="10" height="60" color="#a52a2a"></a-plane>
   <a-assets>
     <img id="bike" src="https://cdn.glitch.com/9233de66-b45d-4647-928d-3fa5216fb051%2Fplain_bicycle_icon_large3.png?1537453157828">
   </a-assets>
-  <a-image id="bikeImg" src="#bike" position="5 0.1 0" rotation="-90 0 0" width="7" height="7"></a-image>
-  <a-image id="bikeImg2" src="#bike" position="5 0.1 -100" rotation="-90 0 0" width="7" height="7"></a-image>
-  <a-image id="bikeImg3" src="#bike" position="5 0.1 -200" rotation="-90 0 0" width="7" height="7"></a-image>
-  <a-image id="bikeImg4" src="#bike" position="5 0.1 -295" rotation="-90 0 0" width="7" height="7"></a-image>
+  <a-image id="bikeImg" src="#bike" position="5 0.1 10" rotation="-90 0 0" width="7" height="7"></a-image>
+  <a-image id="bikeImg2" src="#bike" position="5 0.1 110" rotation="-90 0 0" width="7" height="7"></a-image>
+  
+   <!--  Foot Path for this scene  -->
+  <a-plane id="pedestrainPath2" position="0 0 -295" rotation="-90 0 0" scale="1 10 1" width="20" height="60" color="#FFFAFA"></a-plane>
+  <a-image id="pedestrainImg5" src="#walkpath" position="0 0.1 -5" rotation="-90 0 0" width="6" height="6"></a-image>
+  <a-image id="pedestrainImg6" src="#walkpath" position="0 0.1 -100" rotation="-90 0 0" width="6" height="6"></a-image>
+  <a-image id="pedestrainImg7" src="#walkpath" position="0 0.1 -290" rotation="-90 0 0" width="6" height="6"></a-image>
+  <a-entity id="nextSceneMsg" position="0 5 -300" rotation="0 0 0">
+    <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" width="8" height="3" color="#00CED1"
+             material="opacity: 0.5; transparent: true"></a-plane>
+    <a-text position="0 0 0" align="center"
+            value="Congratulations!\nYou have come to the end of this demo.\nRedirecting to main page..." width="10" height="10" color="#FFF"></a-text>
+  </a-entity>  
+  <a-entity rotation="0 0 0" scale="3 3 3" position="-13 0 -10"
+              collada-model="url(https://cdn.glitch.com/9233de66-b45d-4647-928d-3fa5216fb051%2FLow%2BPoly%2B3D%2BStanding%2BPeople.dae?1542522718012)">
+    </a-entity>
   
   <!-- Sky colour -->
-  <a-sky color="#87cefa"></a-sky>
+  <a-sky color="deepskyblue"></a-sky>  
   
   <!--   Side Path -->
   <a-box id="leftSide" position="-11.5 0 0" rotation="-90 0 0" scale="1.5 20 1.5" width="2" height="60" color="#d3d3d3"></a-box>
@@ -62,6 +83,9 @@
   
   <!--   Road Path -->
   <a-plane id="road" position="24 0 0" rotation="-90 0 0" scale="1.5 20 1" width="15" height="60" color="#708090"></a-plane>
+  
+  <!--   Small road Path -->
+  <a-plane id="smallRoad" position="0 0 0" rotation="90 0 0" scale="1.5 20 1" width="60" height="15" color="#708090"></a-plane>
 
   <!-- Car box. -->
   <a-entity id="car" position = "0 0 360">
@@ -95,27 +119,82 @@
 <!-- Question for the scene -->
   <a-entity id="question" position="0 5 8" rotation="0 0 0">
     <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" 
-             width="8" height="2" color="#A9A9A9"
+             width="8" height="2.5" color="#A9A9A9"
              material="opacity: 0.5; transparent: true"></a-plane>
     <a-text position="0 0 0" align="center"
-            value="Objective of gameplay\nSelect the right answer.\n\nWhich path should you take?" width="10" height="10" color="#000000"></a-text>
+            value="Objective of gameplay\nSelect the right answer.\n\nYou are approaching the footpath.\nWhat should you do?" width="10" height="10" color="#000000"></a-text>
   </a-entity>
   
   <!--  Option 1  -->
-  <a-entity id="option1Select" position="-5.5 5 8" rotation="0 45 0" show-corrective-msg>
+  <a-entity id="option1Select" position="-5.5 6 8" rotation="0 45 0" show-corrective-msg>
     <a-text rotation="0 0 0" position="0 0 0" align="center"
             value="Option 1" 
             width="10" height="10" color="white">
     </a-text>
     <a-circle color="#6495ed" radius="1"></a-circle>
   </a-entity>
+
   
-<!-- Corrective Msg -->
-  <a-entity id="correctiveMsg" position="0 8 9" rotation="25 0 0" visible="false">
-    <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" width="8" height="3" color="firebrick"
+  <a-entity id="option1" position="-8 6.5 15" rotation="0 85 0">
+    <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" width="6" height="2" color="#6495ed"></a-plane>
+    <a-text rotation="0 0 0" position="0 0 0" align="center"
+            value="Option #1\nContinue riding and\n speed past the pedestrians" width="8" height="10" color="#000000">
+    </a-text>
+  </a-entity>
+  
+    
+  <!--  Option 3  -->
+  <a-entity id="option3Select" position="-5.5 4 8" rotation="0 45 0" show-corrective-msg>
+    <a-text rotation="0 0 0" position="0 0 0" align="center"
+            value="Option 3" 
+            width="10" height="10" color="white">
+    </a-text>
+    <a-circle color="#40E0D0" radius="1"></a-circle>
+  </a-entity>
+
+  
+  <a-entity id="option3" position="-8 4 15" rotation="0 85 0">
+    <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" width="6" height="2" color="#40E0D0"></a-plane>
+    <a-text rotation="0 0 0" position="0 0 0" align="center"
+            value="Option #3\nCrash into the pedestrians" width="8" height="10" color="#000000">
+    </a-text>
+  </a-entity>
+  
+  
+<!--  Option 2  -->
+  <a-entity id="option2Select" position="5.5 6 8" rotation="0 -45 0" next-scene>
+    <a-text rotation="0 0 0" position="0 0 0" align="center"
+            value="Option 2" 
+            width="10" height="10" color="white">
+    </a-text>
+    <a-circle color="#a52a2a" radius="1"></a-circle>
+  </a-entity>
+  
+  <a-entity id="option2" position="8 6.5 15" rotation="0 -85 0">
+    <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" width="8" height="2" color="#a52a2a"
+             material="opacity: 0.5; transparent: true"></a-plane>
+    <a-text position="0 0 0" align="center"
+            value="Option #2\nDismount and push vehicle" width="8" height="10" color="#000000"></a-text>
+  </a-entity>
+    
+  
+  <!-- Encouraging Msg -->
+  <a-entity id="encourageMsg" position="0 8 9" rotation="25 0 0" visible="false">
+    <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" width="12" height="4" color="lime"
               material="opacity: 0.9; transparent: true"></a-plane>
     <a-text rotation="0 0 0" position="0 0 0" align="center"
-            value="Wrong answer chosen!\nTry harder next time.\nCyclist should take the cyclist path.\n*Click to dismiss*" 
+            value="Correct answer chosen!\nKeep it up!\n\nReason: Cyclist should walk his/her bicycle in crowded areas and gently alert other users of the same path before overtaking.\n*You will be moving in 5 seconds.*" 
+            width="10" height="10" color="white">
+    </a-text>
+  </a-entity>
+  
+
+<!-- Corrective Msg -->
+  <a-entity id="correctiveMsg" position="0 8 9" rotation="25 0 0" visible="false">
+    <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" width="10" height="3" color="firebrick"
+              material="opacity: 0.9; transparent: true"></a-plane>
+    <a-text rotation="0 0 0" position="0 0 0" align="center"
+            value="Wrong answer chosen!\nTry harder next time.\nCyclist should not ride on crowded shared path.\n*Click to dismiss*" 
             width="10" height="10" color="white">
     </a-text>
     <a-animation begin="click" attribute="visible" to="false"></a-animation>
@@ -132,41 +211,6 @@
    });
   </script>
   
-  <a-entity id="option1" position="-8 5 15" rotation="0 85 0">
-    <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" width="6" height="2" color="#6495ed"></a-plane>
-    <a-text rotation="0 0 0" position="0 0 0" align="center"
-            value="Option #1\nTake the left walkway" width="10" height="10" color="#000000">
-    </a-text>
-  </a-entity>
-  
-<!--  Option 2  -->
-  <a-entity id="option2Select" position="5.5 5 8" rotation="0 -45 0" next-scene>
-    <a-text rotation="0 0 0" position="0 0 0" align="center"
-            value="Option 2" 
-            width="10" height="10" color="white">
-    </a-text>
-    <a-circle color="#a52a2a" radius="1"></a-circle>
-  </a-entity>
-  
-  <!-- Encouraging Msg -->
-  <a-entity id="encourageMsg" position="0 8 9" rotation="25 0 0" visible="false">
-    <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" width="12" height="4" color="lime"
-              material="opacity: 0.9; transparent: true"></a-plane>
-    <a-text rotation="0 0 0" position="0 0 0" align="center"
-            value="Correct answer chosen! Keep it up!\n\nReason: Cyclists are advised to ride on cyclist path.\nStay on the left of the path 
-                   and keep within speed limit.\n*You will be moving in 5 seconds.*" 
-            width="10" height="10" color="white">
-    </a-text>
-  </a-entity>
-  
-    
-  <a-entity id="option2" position="8 5 15" rotation="0 -85 0">
-    <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" width="8" height="2" color="#a52a2a"
-             material="opacity: 0.5; transparent: true"></a-plane>
-    <a-text position="0 0 0" align="center"
-            value="Option #2\nTake the right cyclist path" width="10" height="10" color="#000000"></a-text>
-  </a-entity>
-  
   <script>
   AFRAME.registerComponent('next-scene',{
    init: function (){ 
@@ -179,7 +223,7 @@
 
       setTimeout(function() {
         //your code to be executed after 30 second
-        window.location.href = "footpathScene.html";
+        window.location.href = "index.html";
       }, delayInMilliseconds);
        setTimeout();
      
@@ -187,19 +231,6 @@
    }
    });
   </script> 
-  
-  
-  <!--  Foot Path for next scene  -->
-  <a-plane id="pedestrainPath2" position="0 0 -450" rotation="-90 0 0" scale="1 5 1" width="20" height="60" color="#FFFAFA"></a-plane>
-  <a-image id="pedestrainImg5" src="#walkpath" position="0 0.1 -305" rotation="-90 0 0" width="6" height="6"></a-image>
-  <a-entity id="nextSceneMsg" position="0 5 -300" rotation="0 0 0">
-    <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" width="8" height="3" color="#00CED1"
-             material="opacity: 0.5; transparent: true"></a-plane>
-    <a-text position="0 0 0" align="center"
-            value="Moving to the next scenario!\nPlease hold on." width="10" height="10" color="#FFF"></a-text>
-  </a-entity>
-  
-
   
 </a-scene>
 
