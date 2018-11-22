@@ -1,7 +1,7 @@
 <h1>SafeReality</h1>
 
 <p align="center">
-  <img src="companylogo.jpg" width="350" title="hover text">
+  <img src="https://cdn.glitch.com/9233de66-b45d-4647-928d-3fa5216fb051%2FSafeRealityLogo.jpg?1542859091160" width="350" title="hover text">
 </p>
 
 <h2>Introduction</h2>
