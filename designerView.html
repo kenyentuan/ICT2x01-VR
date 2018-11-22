@@ -2,8 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Hello, WebVR! • A-Frame</title>
-    <meta name="description" content="Hello, WebVR! • A-Frame">
+    <title>SafeReality • A-Frame</title>
+    <meta name="description" content="SafeReality">
     <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
   </head>
   <body>
@@ -96,6 +96,9 @@
        var z = +x + +y;
        if (z > 4)
          z = "4";
+       var weather = ["lightskyblue", "deepskyblue", "dodgerblue", "darkblue", "midnightblue"];
+       var sky = document.querySelector("#sky");
+       sky.setAttribute('color', weather[z]);
       type.setAttribute('value',z);
    });
    }
@@ -109,6 +112,9 @@
        var z = +x - +y;
        if (z < 0)
          z = "0";
+       var weather = ["lightskyblue", "deepskyblue", "dodgerblue", "darkblue", "midnightblue"];
+       var sky = document.querySelector("#sky");
+       sky.setAttribute('color', weather[z]);
       type.setAttribute('value',z);
    });
    }
@@ -125,6 +131,8 @@
        choice.setAttribute('value','2');
        var bg = document.querySelector("#bgNum");
        bg.setAttribute('value','0');
+       var sky = document.querySelector("#sky");
+       sky.setAttribute('color', 'lightskyblue');
    });
    }
    });
@@ -140,6 +148,8 @@
        choice.setAttribute('value','4');
        var bg = document.querySelector("#bgNum");
        bg.setAttribute('value','1');
+       var sky = document.querySelector("#sky");
+       sky.setAttribute('color', 'deepskyblue');
    });
    }
    });
@@ -154,6 +164,8 @@
        choice.setAttribute('value','6');
        var bg = document.querySelector("#bgNum");
        bg.setAttribute('value','4');
+       var sky = document.querySelector("#sky");
+       sky.setAttribute('color', 'midnightblue');
    });
    }
    });
@@ -184,7 +196,7 @@
   
       
       <!-- Sky colour -->
-  <a-sky color="#87cefa"></a-sky>
+  <a-sky id="sky" color="lightskyblue"></a-sky>
       <!--   Ground Path -->
   <a-plane id="greenPatch" position="0 -0.99999 0" rotation="-90 0 0" scale="1 20 1" width="60" height="60" color="#228b22"></a-plane>
 
@@ -281,6 +293,13 @@
     <a-image id="bgMinus" position="-3 0 0" rotation="0 0 0" width="1" height="1" decrease-bgnum
            src="https://cdn.glitch.com/9233de66-b45d-4647-928d-3fa5216fb051%2Fminus.png?1542535368093"></a-image>
   </a-entity>
+  
+  <!-- Link to go to sharedPathScene.html -->
+  <a-assets>
+    <img id="home">
+  </a-assets>
+  <a-entity position="6 8 8" rotation="25 -45 0" link="href: index.html; title: Back to Home; titleColor: black; backgroundColor: red;"></a-entity>
+
   
     </a-scene>
 
