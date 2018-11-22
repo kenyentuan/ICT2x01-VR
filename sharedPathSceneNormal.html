@@ -49,7 +49,7 @@
   <a-image id="bikeImg4" src="#bike" position="5 0.1 -295" rotation="-90 0 0" width="7" height="7"></a-image>
   
   <!-- Sky colour -->
-  <a-sky color="#87cefa"></a-sky>
+  <a-sky color="deepskyblue"></a-sky>
   
   <!--   Side Path -->
   <a-box id="leftSide" position="-11.5 0 0" rotation="-90 0 0" scale="1.5 20 1.5" width="2" height="60" color="#d3d3d3"></a-box>
@@ -102,12 +102,35 @@
   </a-entity>
   
   <!--  Option 1  -->
-  <a-entity id="option1Select" position="-5.5 5 8" rotation="0 45 0" show-corrective-msg>
+  <a-entity id="option1Select" position="-5.5 6 8" rotation="0 45 0" show-corrective-msg>
     <a-text rotation="0 0 0" position="0 0 0" align="center"
             value="Option 1" 
             width="10" height="10" color="white">
     </a-text>
     <a-circle color="#6495ed" radius="1"></a-circle>
+  </a-entity>
+  
+  <a-entity id="option1" position="-8 6.5 15" rotation="0 85 0">
+    <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" width="6" height="2" color="#6495ed"></a-plane>
+    <a-text rotation="0 0 0" position="0 0 0" align="center"
+            value="Option #1\nTake the left walkway" width="10" height="10" color="#000000">
+    </a-text>
+  </a-entity>
+  
+    <!--  Option 3  -->
+  <a-entity id="option3Select" position="-5.5 4 8" rotation="0 45 0" show-corrective-msg>
+    <a-text rotation="0 0 0" position="0 0 0" align="center"
+            value="Option 3" 
+            width="10" height="10" color="white">
+    </a-text>
+    <a-circle color="#40E0D0" radius="1"></a-circle>
+  </a-entity>
+  
+  <a-entity id="option3" position="-8 4 15" rotation="0 85 0">
+    <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" width="6" height="2" color="#40E0D0"></a-plane>
+    <a-text rotation="0 0 0" position="0 0 0" align="center"
+            value="Option #3\nRide on both pathways" width="10" height="10" color="#000000">
+    </a-text>
   </a-entity>
   
 <!-- Corrective Msg -->
@@ -132,15 +155,8 @@
    });
   </script>
   
-  <a-entity id="option1" position="-8 5 15" rotation="0 85 0">
-    <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" width="6" height="2" color="#6495ed"></a-plane>
-    <a-text rotation="0 0 0" position="0 0 0" align="center"
-            value="Option #1\nTake the left walkway" width="10" height="10" color="#000000">
-    </a-text>
-  </a-entity>
-  
 <!--  Option 2  -->
-  <a-entity id="option2Select" position="5.5 5 8" rotation="0 -45 0" next-scene>
+  <a-entity id="option2Select" position="5.5 6 8" rotation="0 -45 0" next-scene>
     <a-text rotation="0 0 0" position="0 0 0" align="center"
             value="Option 2" 
             width="10" height="10" color="white">
@@ -160,7 +176,7 @@
   </a-entity>
   
     
-  <a-entity id="option2" position="8 5 15" rotation="0 -85 0">
+  <a-entity id="option2" position="8 6.5 15" rotation="0 -85 0">
     <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" width="8" height="2" color="#a52a2a"
              material="opacity: 0.5; transparent: true"></a-plane>
     <a-text position="0 0 0" align="center"
@@ -179,7 +195,7 @@
 
       setTimeout(function() {
         //your code to be executed after 30 second
-        window.location.href = "footpathScene.html";
+        window.location.href = "footpathSceneNormal.html";
       }, delayInMilliseconds);
        setTimeout();
      
