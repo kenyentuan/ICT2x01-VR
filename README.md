@@ -21,14 +21,14 @@ This VR game consists a tutorial to orientate the players of the game, different
 
 # Guide: How to Play SafeReality?
 > 
-Setting up SafeReality game with a virtual reality device is easy! 
-1. Download SafeReality game from the GitHub repository
-> 1.1 <<Insert URL here>>
+Setting up SafeReality game with a virtual reality device is easy! SafeReality is based on WebVR framework using <a href="https://aframe.io/"> **A-Frame** </a> and does not required any installation file.
+1. Access SafeReality game from the GitHub page
+> 1.1 <a href="https://kenyentuan.github.io/ICT2x01-VR/">**https://kenyentuan.github.io/ICT2x01-VR/**</a>
 
-
-2. Click SafeReality application 
-3. Place mobile device into compatible virtual reality device
-4. Your virtuality reality adventure begins with SafeReality!
+2. Place mobile device into compatible virtual reality device
+3. Your virtuality reality adventure begins with SafeReality!
+4. Still unsure on how to play SafeReality? You may refer to our Youtube tutorial video using the link below
+> 4.1 <a href="https://www.youtube.com/watch?v=d0tp2irKkTI&feature=youtu.be">**https://youtu.be/d0tp2irKkTI**</a>
 
 ### For Player
 1. If you are unfamiliar with SafeReality, please select "**Tutorial mode**" 
