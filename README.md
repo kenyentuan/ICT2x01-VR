@@ -13,6 +13,7 @@ This VR game consists a tutorial to orientate the players of the game, different
 
 # Game Features
 * Tutorial Mode
+* Three Diffculty Levels (e.g. Easy, Normal, Hard)
 * Scenario Game Based
 * Designer Interface for SCTF Members
 
